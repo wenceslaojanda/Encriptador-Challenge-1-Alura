@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Sarabun:wght@100;300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Alura Challenge - Encriptador</title>
+</head>
+
+<body>
+
+<div class="wraper">
+
+    <header>
+      <h1 class="logo">
+        <a href="">
+          <img src="./img/logo.svg" alt="Alura">
+        </a>
+      </h1> 
+    </header>
+
+  
+    <section class="section1">
+      <div class="input">
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui" autofocus>
+      </div>
+      <div class="msg-informativo">
+        <img src="./img/info.svg" alt="Alura">
+        <span>Sólo letras minúsculas y sin acentos</span>
+      </div>
+    </section>
+    
+    <section class="section2">
+      <div class="encriptar">
+        <button class="btn" id="btn-encriptar" >Encriptar</button>
+      </div>
+      <div class="desencriptar">
+        <button class="btn" id="btn-desencriptar" >Desencriptar</button>
+      </div>
+    </section>
+
+    <section class="section3">
+      <div class="mensaje-error">
+          Sólo letras minúsculas y sin acentos
+        </div>
+        <div class="cuerpo-mensaje" id="msg">
+          Ingrese el texto que desees encriptar o desencriptar
+        </div>
+      
+        <div class="btn-copiar">
+          <button class="btn" id="btn-copy">Copiar</button>
+        </div>
+    </section>
+
+  
+</div>
+    <script src="app.js"></script>
+</body>
+
+</html>

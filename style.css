@@ -1,0 +1,185 @@
+:root{
+  --color-texto-azul: #0A3871;
+  --color-mensajes: #495057;
+  --color-mensaje-error: #343A40;
+  --color-fondo: #E5E5E5;
+  --color-texto-error: rgb(254, 75, 75);
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--color-fondo);
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+}
+
+.wraper{
+  width: 375px;
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+header{
+  height: 96px;
+  padding: 24px 16px;
+}
+
+/* section 1 */
+
+.section1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+  .input{
+    height: 60px;
+  }
+
+    .text-input{
+      color: var(--color-texto-azul);
+      font-size: 32px;
+      background-color: var(--color-fondo);
+      border: none;
+
+    }
+    .text-input:focus{
+      border: 1px solid var(--color-fondo);
+      outline: none;
+    }
+
+  .msg-informativo{
+    color: var(--color-mensajes);
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    gap: 5px;
+  }
+  
+/* section 2 */
+.section2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  .btn{
+    width: 343px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--color-texto-azul);
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  
+  }  
+    #btn-encriptar{
+      background-color: var(--color-texto-azul);
+      color: #ffffff;
+    }
+    #btn-desencriptar{
+      background-color: var(--color-fondo);
+      color: var(--color-texto-azul);
+    }
+
+/* section 3 */
+.section3{
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  margin-top: 30px;
+}
+  .mensaje-error{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120%;
+    color: var(--color-texto-error);
+    margin: 16px 0px;
+    display: none;
+  }
+  .cuerpo-mensaje{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 150%;
+    color: var(--color-mensajes);
+    margin: 16px 0px;
+  }
+
+  .btn-copiar{
+    display: none;
+  }
+    #btn-copy{
+      width: 279px;
+      background: #ffffff;
+      color: var(--color-texto-azul);
+    }
+  
+    .visible{
+      display: block;
+    }
+
+/* media para tablet*/
+@media screen and (min-width: 768px) {
+  .wraper{
+    width: 768px;
+  }
+
+  .section2{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .text-input{
+    width: 100%;
+  }
+
+  .btn-copiar{
+    align-self: center;
+  }
+
+}
+
+/* media para tablet*/
+@media screen and (min-width: 1024px) {
+  .wraper{
+    width: 80%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: 'header header mensaje'
+    'input input mensaje'
+    'botones botones mensaje';
+    gap: 20px;
+  }
+
+  header{
+    grid-area: header;
+  }
+
+  .section1{
+    grid-area: input;
+  }
+
+  .section2{
+    grid-area: botones;
+  }
+
+  .section3{
+    grid-area: mensaje;
+    justify-content: space-between;
+  }
+
+}
