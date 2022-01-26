@@ -132,6 +132,17 @@ header{
       display: block;
     }
 
+    footer{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-top: 30px;
+      color: rgba(0,0,0,1);
+      opacity: .6; 
+      font-size: 11px;
+    }
+
 /* media para tablet*/
 @media screen and (min-width: 768px) {
   .wraper{
@@ -151,6 +162,11 @@ header{
     align-self: center;
   }
 
+  footer{
+    flex-direction: row;
+    justify-content: center;
+  }
+
 }
 
 /* media para tablet*/
@@ -161,7 +177,8 @@ header{
     display: grid;
     grid-template-areas: 'header header mensaje'
     'input input mensaje'
-    'botones botones mensaje';
+    'botones botones mensaje'
+    'footer footer footer';
     gap: 20px;
   }
 
@@ -180,6 +197,12 @@ header{
   .section3{
     grid-area: mensaje;
     justify-content: space-between;
+  }
+
+  footer{
+    flex-direction: row;
+    justify-content: center;
+    grid-area: footer;
   }
 
 }
